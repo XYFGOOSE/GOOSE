@@ -3,11 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const redirectUri = 'https://XYFGOOSE.github.io/GOOSE/callback.html'; // 您的 GitHub Pages 回调 URL
   let accessToken = '';
 
-  document.getElementById('github-login').addEventListener('click', () => {
-    const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=repo`;
-    window.location.href = authUrl;
-  });
-
   function getAccessToken(code) {
     return axios.post('https://github.com/login/oauth/access_token', {
       client_id: clientId, // 您的 GitHub 客户端 ID
@@ -20,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function createIssue(title, body) {
-    return axios.post(`https://api.github.com/repos/XYFGOOSE/GOOSE/issues`, { // 您的 GitHub 用户名和仓库名称
+    return axios.post(`https://api.github.com/repos/XYFGOOSE/GOOSE/issues`, {
       title: title,
       body: body
     }, {
@@ -36,15 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('record-form').style.display = 'block';
     });
   }
-
-  document.getElementById('submit-record').addEventListener('click', () => {
-    const record = document.getElementById('record-input').value;
-    createIssue('New Record', record).then(() => {
-      console.log('Record saved');
-    }).catch(error => {
-      console.error(error);
-    });
-  });
 });
 
   
