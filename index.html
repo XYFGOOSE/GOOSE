@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Official Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="auth.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Official Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- 确保 axios 库在 auth.js 之前加载 -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="auth.js" defer></script>
+</head>
 <body>
   <!-- top  menu button -->
 
@@ -46,7 +47,7 @@
       </a>
     </header>
     <!-- End  Showcase -->
-    <div id="record-form" style="display:none;" class="mt-4">
+     <div id="record-form" style="display:none;" class="mt-4">
       <h3 class="text-center">Submit your record</h3>
       <div class="form-group">
         <input type="text" id="record-input" class="form-control" placeholder="Enter your record">
@@ -189,13 +190,6 @@
       
     </div>
   </section> <!-- END footer (Links) -->
-  <div id="record-form" style="display:none;" class="mt-4">
-    <h3 class="text-center">Submit your record</h3>
-    <div class="form-group">
-      <input type="text" id="record-input" class="form-control" placeholder="Enter your record">
-    </div>
-    <button id="submit-record" class="btn btn-success btn-block">Submit</button>
-  </div>
 
   <!-- footer (copyRight)  -->
   <footer class="footer">
@@ -217,13 +211,6 @@
 
   <!-- javascript File -->
   <script src="script.js"></script>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>你的网页标题</title>
-      <link rel="stylesheet" href="styles.css"> <!-- 如果有CSS样式表，添加链接 -->
   </head>
 </body>
 </html>
